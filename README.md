@@ -30,7 +30,7 @@
 ・「こういう動きをするもの」として割り切るとすごく使いやすくなる  
 
 
-## サンプル0 いい感じの上下移動
+## サンプル0 / いい感じの上下移動
 https://ikeryou.github.io/intr2/0/  
 [動画](https://ikeryou.github.io/intr2/movie/3.mp4)  
 
@@ -79,7 +79,7 @@ function update() {
 }
 ```
 
-## サンプル1 いい感じの円の動き
+## サンプル1 / いい感じの円の動き
 https://ikeryou.github.io/intr2/1/  
 [動画](https://ikeryou.github.io/intr2/movie/4.mp4)  
 
@@ -128,14 +128,14 @@ function update() {
 }
 ```
 
-## サンプル2 奥行きのある円の動き
+## サンプル2 / 奥行きのある円の動き
 https://ikeryou.github.io/intr2/2/  
 [動画](https://ikeryou.github.io/intr2/movie/5.mp4)  
 
 ・X値とZ値にMath.sin()とMath.cos()を使用すれば奥行きのある円の動きになる  
 
 
-## サンプル3 位置以外にも使用
+## サンプル3 / 位置以外にも使用
 https://ikeryou.github.io/intr2/3/  
 [動画](https://ikeryou.github.io/intr2/movie/6.mp4)  
 
@@ -143,7 +143,7 @@ https://ikeryou.github.io/intr2/3/
 ・色操作は[chroma.js](https://github.com/gka/chroma.js)を使用  
 
 
-## サンプル4 不規則な浮遊感
+## サンプル4 / 不規則な浮遊感
 https://ikeryou.github.io/intr2/4/  
 [動画](https://ikeryou.github.io/intr2/movie/7.mp4)  
 
@@ -151,7 +151,7 @@ https://ikeryou.github.io/intr2/4/
 ・めちゃめちゃよく使う  
 
 
-## サンプル5 円周上に配置
+## サンプル5 / 円周上に配置
 https://ikeryou.github.io/intr2/5/  
 [動画](https://ikeryou.github.io/intr2/movie/8.mp4)  
 
@@ -160,7 +160,7 @@ https://ikeryou.github.io/intr2/5/
 ・めちゃめちゃよく使う  
 
 
-## サンプル6 いろんな値に使用
+## サンプル6 / いろんな値に使用
 https://ikeryou.github.io/intr2/6/  
 [動画](https://ikeryou.github.io/intr2/movie/9.mp4)  
 
@@ -168,7 +168,7 @@ https://ikeryou.github.io/intr2/6/
 ・かつすべて違う速度で増える角度を使用する  
 
 
-## サンプル7 いろんな値に使用(複数)
+## サンプル7 / いろんな値に使用(複数)
 https://ikeryou.github.io/intr2/7/  
 [動画](https://ikeryou.github.io/intr2/movie/10.mp4)  
 
