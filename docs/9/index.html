@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+    <title>第２回インタラ会</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:title" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+      }
+      body, html {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #2c3573;
+      }
+
+      .sub {
+        opacity: 0.25
+      }
+
+      .fix {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .container {
+        width: 90%;
+        height: 80%;
+        top: 10%;
+        left: 5%;
+      }
+
+      .mv {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .dot {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        background-color: #EF594D;
+        /*display: none;*/
+      }
+      .dot2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        background-color: #DEC262;
+        /*display: none;*/
+      }
+
+      .doc1 {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        color: #FFF;
+        margin-top: 5%;
+        font-size: 20px;
+      }
+
+      .doc1 .a {
+        transform: translateX(-7px);
+      }
+
+      .doc1 .b {
+        transform: translateX(12px);
+      }
+
+      .doc1 .c {
+        transform: translateX(20px);
+      }
+
+      .doc1 .d {
+        transform: translateX(20px);
+      }
+
+      .doc1 .e {
+        transform: translateX(20px);
+      }
+
+      .doc2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .doc2 .line {
+        width: 1px;
+        height: 100%;
+        background-color: #FFF;
+      }
+
+      .doc3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .doc3 .line {
+        width: 100%;
+        height: 1px;
+        background-color: #FFF;
+      }
+
+      .doc4 {
+        width: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        color: #FFF;
+        line-height: 0;
+        font-size: 20px;
+        margin-left: -3%;
+        text-align: right;
+      }
+
+      .doc4 .a {
+        transform: translateY(-20px);
+      }
+
+      .doc4 .b {
+        transform: translateY(-10px);
+      }
+
+      .doc4 .c {
+        transform: translateY(0px);
+      }
+
+      .doc4 .d {
+        transform: translateY(10px);
+      }
+
+      .doc4 .e {
+        transform: translateY(20px);
+      }
+
+
+
+    </style>
+
+  </head>
+  <body>
+
+    <div class="fix container">
+
+      <div class="fix mv">
+        <div class="dot"></div>
+        <div class="dot2"></div>
+      </div>
+
+      <div class="fix doc1">
+        <p class="a">0度</p>
+        <p class="b">90度</p>
+        <p class="c">180度</p>
+        <p class="d">270度</p>
+        <p class="e">360度</p>
+      </div>
+
+      <div class="fix doc2">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+
+      <div class="fix doc3">
+        <div class="line"></div>
+        <div class="line sub"></div>
+        <div class="line"></div>
+        <div class="line sub"></div>
+        <div class="line"></div>
+      </div>
+
+      <div class="fix doc4">
+        <p class="a">1</p>
+        <p class="b">0.5</p>
+        <p class="c">0</p>
+        <p class="d">-0.5</p>
+        <p class="e">-1</p>
+      </div>
+
+    </div>
+
+    <script src="../libs/jquery.min.js"></script>
+    <script src="../libs/TweenMax.js"></script>
+    <script src="../libs/isMobile.min.js"></script>
+    <script src="main.js"></script>
+
+  </body>
+</html>
