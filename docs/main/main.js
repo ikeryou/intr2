@@ -21,8 +21,8 @@ param = [
 colorA = 0x000000;
 colorB = 0x000000;
 
-posY = window.innerHeight;
-posX = 0;
+posY = window.innerHeight * 0;
+posX = -9999;
 allSpeed = 4;
 
 cnt = 0
@@ -31,11 +31,13 @@ cnt = 0
 window.requestAnimationFrame(update);
 function update() {
 
-  cnt++;
-
   // 画面のサイズ
   sw = window.innerWidth
   sh = window.innerHeight
+
+  // $('.mv').css({
+  //   perspective:map(Math.cos(radian(param[5].ang)), 150, 500, -1, 1) + 'px'
+  // });
 
   txtW = textA.width();
   txtH = textA.height();
@@ -43,7 +45,7 @@ function update() {
   zure = 0.01;
 
   c = chroma.mix(colorA, colorB, map(Math.cos(radian(param[0].ang)), 0, 1, -1, 1)).css();
-  shadowInterval = map(Math.cos(radian(param[4].ang * 2)), 0, 2, -1, 1);
+  shadowInterval = map(Math.cos(radian(param[4].ang * 5)), 0, 4, -1, 1);
   txtShadow = shadow(param[0].ang, c, shadowInterval);
 
 
@@ -82,19 +84,36 @@ function update() {
     rotationZ:rotZ
   });
 
-  posX -= allSpeed * 0.1
-  posY += allSpeed;
-  if(posY > sh) {
-    posX = random(-sw * 0.1, sw * 0.1);
-    posY = -sh;
-    allSpeed = random(5, 6);
+  if(cnt == 0) {
     colorA = randomArr([0xE7484C, 0x172679, 0xda286e, 0xa32bc8]);
     colorB = randomArr([0xECC451, 0x36a3e8, 0xf9bcaa, 0xadcffd]);
+  }
+
+  // posX -= allSpeed * 0.1
+  // posY += allSpeed;
+  // if(posY > sh) {
+  //   posX = random(-sw * 0.1, sw * 0.1);
+  //   posY = -sh;
+  //   allSpeed = random(5, 6);
+  //   colorA = randomArr([0xE7484C, 0x172679, 0xda286e, 0xa32bc8]);
+  //   colorB = randomArr([0xECC451, 0x36a3e8, 0xf9bcaa, 0xadcffd]);
+  // }
+
+  posX -= allSpeed;
+  posY = 0;
+  if(posX < -sw * 0.85) {
+    posX = sw * 0.85;
+    posY = random(-sh * 0.1, sh * 0.1);
+    allSpeed = 10;
+    colorA = randomArr([0xE7484C, 0x172679, 0xda286e, 0xa32bc8, 0x000000]);
+    colorB = randomArr([0xECC451, 0x36a3e8, 0xf9bcaa, 0xadcffd, 0xffffff]);
   }
 
   jQuery.each(param, function() {
     this.ang += this.speed * 1;
   });
+
+  cnt++;
 
   window.requestAnimationFrame(update);
 }
@@ -106,7 +125,7 @@ function shadow(ang, color, interval) {
   if(isMobile.any) {
     num = 10;
   } else {
-    num = 20;
+    num = 10;
   }
 
   res = '';
