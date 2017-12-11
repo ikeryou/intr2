@@ -25,9 +25,13 @@ posY = window.innerHeight;
 posX = 0;
 allSpeed = 4;
 
+cnt = 0
+
 // 毎フレーム実行
 window.requestAnimationFrame(update);
 function update() {
+
+  cnt++;
 
   // 画面のサイズ
   sw = window.innerWidth
@@ -39,7 +43,9 @@ function update() {
   zure = 0.01;
 
   c = chroma.mix(colorA, colorB, map(Math.cos(radian(param[0].ang)), 0, 1, -1, 1)).css();
-  txtShadow = shadow(param[0].ang, c);
+  shadowInterval = map(Math.cos(radian(param[4].ang * 2)), 0, 2, -1, 1);
+  txtShadow = shadow(param[0].ang, c, shadowInterval);
+
 
   TweenMax.set(textA, {
     color:c,
@@ -81,7 +87,7 @@ function update() {
   if(posY > sh) {
     posX = random(-sw * 0.1, sw * 0.1);
     posY = -sh;
-    allSpeed = random(2, 6);
+    allSpeed = random(5, 6);
     colorA = randomArr([0xE7484C, 0x172679, 0xda286e, 0xa32bc8]);
     colorB = randomArr([0xECC451, 0x36a3e8, 0xf9bcaa, 0xadcffd]);
   }
@@ -94,13 +100,13 @@ function update() {
 }
 
 
-function shadow(ang, color) {
+function shadow(ang, color, interval) {
 
   radius = 0;
   if(isMobile.any) {
-    num = 10;
+    num = 5;
   } else {
-    num = 20;
+    num = 10;
   }
 
   res = '';
@@ -112,7 +118,7 @@ function shadow(ang, color) {
     if(i != num) {
       res += ', ';
     }
-    radius += 2;
+    radius += interval;
   }
 
   return res;
