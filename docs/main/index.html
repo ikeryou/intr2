@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+    <title>第２回インタラ会</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:title" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body, html {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #d7dbda;
+        font-family: "ten-mincho", serif;
+        font-feature-settings: "ss02";
+      }
+      .mv {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transform-style: preserve-3d;
+        overflow: hidden;
+        backface-visibility: visible;
+      }
+
+      .mv > .inner {
+        position: relative;
+        backface-visibility: visible;
+        transform-origin: 50% 0%;
+      }
+
+      .text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #00ff00;
+        font-size: 25vw;
+        backface-visibility: visible;
+      }
+
+      @media screen and (max-width: 480px) {
+        .text {
+          font-size: 50vw;
+        }
+      }
+
+
+      .text.a {
+        color: #fff;
+        text-shadow: 10px 10px 0px #000;
+      }
+
+      .text.b {
+        color: #ff0000;
+        -webkit-mask-image:-webkit-linear-gradient(45deg, rgba(0,0,0,0), rgba(0,0,0,1));
+      }
+
+
+    </style>
+
+    <script src="https://use.typekit.net/vgb3nyw.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  </head>
+  <body>
+
+    <div class="mv">
+      <div class="inner">
+        <p class="text a">☃</p>
+        <p class="text b">☃</p>
+      </div>
+    </div>
+
+    <script src="../libs/jquery.min.js"></script>
+    <script src="../libs/TweenMax.js"></script>
+    <script src="../libs/isMobile.min.js"></script>
+    <script src="../libs/chroma.min.js"></script>
+    <script src="main.js"></script>
+
+  </body>
+</html>
