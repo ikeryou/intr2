@@ -104,7 +104,7 @@ function shadow(ang, color, interval) {
 
   radius = 0;
   if(isMobile.any) {
-    num = 5;
+    num = 10;
   } else {
     num = 20;
   }
